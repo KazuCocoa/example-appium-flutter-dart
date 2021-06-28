@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_driver/driver_extension.dart';
 
 void main() {
+  enableFlutterDriverExtension();
   runApp(MyApp());
 }
 
@@ -104,6 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        key: Key('increment'), // To pvidide a key to detect the elemenet
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
