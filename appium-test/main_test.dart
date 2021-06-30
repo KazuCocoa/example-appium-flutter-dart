@@ -25,7 +25,7 @@ void main() {
     await driver.quit();
   });
 
-  test('click increment twice', () async {
+  test('click increment 10 times', () async {
     // UIA2
     var incrementElement = await driver.findElement(
         AppiumBy.accessibilityId('Increment'));
